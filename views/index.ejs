@@ -1,4 +1,5 @@
-<% layout('layout', { title: 'Listado de Traducciones' }) %>
+<%- include('components/banner', { title: 'Listado de Traducciones' }) %>
+
 <div class="mb-3">
   <a href="/agregar" class="btn btn-success">Agregar Nueva Traducción</a>
 </div>
@@ -9,16 +10,19 @@
     </tr>
   </thead>
   <tbody>
-    
+    <% lista.forEach((traduccion) => { %>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td><%= traduccion.palabra %></td>
+        <td><%= traduccion.traduccion %></td>
+        <td><%= traduccion.pronunciacion %></td>
+        <td><%= traduccion.categoria %></td>
         <td>
-          <a href="/editar/" class="btn btn-sm btn-warning">Editar</a>
-          <a href="/eliminar/" class="btn btn-sm btn-danger">Eliminar</a>
+          <a href="/editar/<%= traduccion.id %>" class="btn btn-sm btn-warning">Editar</a>
+          <a href="/eliminar/<%= traduccion.id %>" class="btn btn-sm btn-danger">Eliminar</a>
         </td>
       </tr>
+    <% }); %>
   </tbody>
 </table>
+
+<%- include('components/footer') %>

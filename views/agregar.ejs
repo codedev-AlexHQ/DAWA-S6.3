@@ -1,4 +1,4 @@
-<% layout('layout', { title: 'Agregar Traducción' }) %>
+<%- include('components/banner', { title: 'Agregar Traducción' }) %>
 <h2>Agregar Nueva Traducción</h2>
 <form action="/agregar" method="POST" class="mt-4">
   <div class="mb-3">
@@ -21,3 +21,4 @@
   <a href="/listar" class="btn btn-secondary">Cancelar</a>
 </form>
 
+<%- include('components/footer') %>

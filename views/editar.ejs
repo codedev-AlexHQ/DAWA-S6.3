@@ -1,4 +1,4 @@
-<% layout('layout', { title: 'Editar Traducción' }) %>
+<%- include('components/banner', { title: 'Editar Traducción' }) %>
 <h2>Editar Traducción</h2>
 <form action="/editar/<%= t.id %>" method="POST" class="mt-4">
   <div class="mb-3">
@@ -20,3 +20,4 @@
   <button type="submit" class="btn btn-primary">Guardar Cambios</button>
   <a href="/listar" class="btn btn-secondary">Cancelar</a>
 </form>
+<%- include('components/footer') %>
