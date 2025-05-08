@@ -1,0 +1,23 @@
+<% layout('layout', { title: 'Agregar Traducción' }) %>
+<h2>Agregar Nueva Traducción</h2>
+<form action="/agregar" method="POST" class="mt-4">
+  <div class="mb-3">
+    <label class="form-label">Palabra (Español)</label>
+    <input name="palabra" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Traducción (Quechua)</label>
+    <input name="traduccion" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Pronunciación</label>
+    <input name="pronunciacion" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Categoría (opcional)</label>
+    <input name="categoria" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-primary">Guardar</button>
+  <a href="/listar" class="btn btn-secondary">Cancelar</a>
+</form>
+

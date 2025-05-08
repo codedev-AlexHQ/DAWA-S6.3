@@ -1,0 +1,22 @@
+<% layout('layout', { title: 'Editar Traducción' }) %>
+<h2>Editar Traducción</h2>
+<form action="/editar/<%= t.id %>" method="POST" class="mt-4">
+  <div class="mb-3">
+    <label class="form-label">Palabra (Español)</label>
+    <input name="palabra" class="form-control" value="<%= t.palabra %>" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Traducción (Quechua)</label>
+    <input name="traduccion" class="form-control" value="<%= t.traduccion %>" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Pronunciación</label>
+    <input name="pronunciacion" class="form-control" value="<%= t.pronunciacion %>" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Categoría (opcional)</label>
+    <input name="categoria" class="form-control" value="<%= t.categoria %>">
+  </div>
+  <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+  <a href="/listar" class="btn btn-secondary">Cancelar</a>
+</form>
